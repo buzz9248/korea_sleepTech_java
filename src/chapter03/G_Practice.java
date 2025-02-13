@@ -57,11 +57,8 @@ public class G_Practice {
 			} else {
 				System.out.println("틀렸습니다. 다시 시도해주세요.");
 			}
-			
 		}
 		sc.close();
-		System.out.println("프로그램이 종료되었습니다.");
-		
+		System.out.println("프로그램이 종료되었습니다.");	
 	}
-
 }
