@@ -130,10 +130,13 @@ public class InventorySystem {
 					
 					if (sc.nextLine().equalsIgnoreCase("y")) {
 						System.out.println("=== Exiting ===");
+						sc.close();
 						return;
+					} else {
+						System.out.println("Please try again");
+						break;
 					}
-					System.out.println("Please try again");
-					
+
 				default:
 					System.out.println("Invalid option. Try again!");
 				}
@@ -145,7 +148,8 @@ public class InventorySystem {
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
-			sc.close();
+			
 		}
+		
 	}
 }
