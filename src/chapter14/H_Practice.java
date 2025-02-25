@@ -36,7 +36,6 @@ public class H_Practice {
 				new StudentClass("이민경", 31, 3.5)
 			);
 		
-		
 		// 1) 학점이 4.0 이상인 학생 필터링
 		List<StudentClass> filteredStudents = studentClasses.stream()
 				.filter(student -> student.getGrade() >= 4.0)
