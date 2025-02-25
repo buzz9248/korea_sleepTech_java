@@ -49,6 +49,7 @@ public class H_Practice {
 		System.out.println("학점이 4.0이상인 학생");
 		filteredStudents.forEach(System.out::println);
 		
+		
 		// 2) 학생 이름 목록만 추출
 		List<String> studentNames = studentClasses.stream()
 //				.map(student -> student.getName())
