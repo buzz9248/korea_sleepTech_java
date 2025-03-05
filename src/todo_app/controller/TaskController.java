@@ -22,6 +22,10 @@ public class TaskController {
 		return service.showAllTasks();
 	}
 	
+	public void updateTask(Long id, String newText) {
+		service.updateTask(id, newText);
+	}
+	
 	public void deleteTask(long id) {
 		service.deleteTask(id);
 	}

@@ -21,7 +21,7 @@ public class TaskRepository {
 	
 	public Optional<Task> findById(Long id) {
 		return taskList.stream()
-				.filter(task -> task.getUserId().equals(id))
+				.filter(task -> task.getId().equals(id))
 				.findFirst();
 	}
 	

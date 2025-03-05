@@ -50,11 +50,10 @@ public class App {
 		
 		System.out.println("5. TODO 추가");
 		System.out.println("6. TODO 조회");
-		System.out.println("7. TODO 삭제");
-		
-		System.out.println("8. 프로그램 종료");
-		System.out.print("메뉴를 선택하세요: ");
-		
+		System.out.println("7. TODO 수정"); 
+		System.out.println("8. TODO 삭제");
+	    System.out.println("9. 프로그램 종료");
+	    System.out.print("메뉴를 선택하세요: ");
 	}
 	
 	private static int getChoice() {
@@ -172,12 +171,18 @@ public class App {
 		
 		case 7: {
 			long id = getTaskIdInput();
+			String newText = getInput("새로운 TODO 내용 입력: ");
+			taskController.updateTask(id, newText);
+			break;
+		}
+		case 8: {
+			long id = getTaskIdInput();
 			taskController.deleteTask(id);
 			break;
 		}
 		
-		// 프로그램 종료
-		case 8: {
+		
+		case 9: {
 			System.out.println("프로그램 종료");
 			return false;
 		}

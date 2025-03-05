@@ -67,6 +67,21 @@ public class TaskServiceImpl implements TaskService {
 		return taskRespDtos;
 	}
 	
+	@Override
+	public void updateTask(Long id, String newText) {
+		try {
+			Task task = taskRepository.findById(id)
+					.orElseThrow(() -> new IllegalArgumentException("해당 ID를 가진 할 일을 찾을 수 없습니다." + id));
+			
+			task.setText(newText);
+			System.out.println("수정 완");
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+	
 
 	@Override
 	public void deleteTask(Long id) {
@@ -79,6 +94,8 @@ public class TaskServiceImpl implements TaskService {
 			System.out.println(e.getMessage());
 		}
 	}
+
+
 
 	
 }
