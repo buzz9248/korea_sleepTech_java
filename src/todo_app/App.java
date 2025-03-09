@@ -73,14 +73,20 @@ public class App {
 	}
 	
 	private static long getUserIdInput() {
-		String input = getInput("UserId를 입력하세요.");
+		String input = getInput("UserId를 입력하세요");
 		return Long.parseLong(input);
 	}
 	
 	private static long getTaskIdInput() {
-		String input = getInput("TaskId를 입력하세요.");
+		String input = getInput("TaskId를 입력하세요");
 		return Long.parseLong(input);
 	}
+	
+	private static String getPassword() {
+		String input = getInput("비번을 입력하세요");
+		return sc.nextLine().trim();
+	}
+	
 	
 	private static UserSignUpReqDto signUpUserReq() {
 		UserSignUpReqDto dto = null;

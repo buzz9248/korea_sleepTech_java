@@ -95,6 +95,12 @@ public class TaskServiceImpl implements TaskService {
 		}
 	}
 
+	@Override
+	public List<TaskRespDto> getTasksByUserId(Long userId) {
+	    return taskRepository.findByUserId(userId).stream()
+	        .map(task -> new TaskRespDto(task.getId(), task.getUserId(), task.getText(), task.getCreationDate()))
+	        .collect(Collectors.toList());
+	}
 
 
 	

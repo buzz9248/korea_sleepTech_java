@@ -30,5 +30,9 @@ public class TaskController {
 		service.deleteTask(id);
 	}
 	
+	public List<TaskRespDto> getTasksByUserId(Long userId) {
+	    return service.getTasksByUserId(userId);
+	}
+
 	
 }

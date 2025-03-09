@@ -3,6 +3,7 @@ package todo_app.repository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import todo_app.entity.Task;
 
@@ -32,5 +33,12 @@ public class TaskRepository {
 	public void delete(Task task) {
 		taskList.remove(task);
 	}
+
+	public List<Task> findByUserId(Long userId) {
+	    return taskList.stream()
+	        .filter(task -> task.getUserId().equals(userId))
+	        .collect(Collectors.toList());
+	}
+
 
 }

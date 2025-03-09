@@ -10,4 +10,6 @@ public interface UserService {
 	List<UserRespDto> showAllUsers();
 	UserRespDto findUserById(Long id);
 	void deleteUser(Long id);
+	Long login(String username, String password);
+
 }

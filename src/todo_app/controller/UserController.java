@@ -33,5 +33,10 @@ public class UserController {
 	}
 	
 	
+	public Long login(String username, String password) {
+	    return service.login(username, password);
+	}
+
+	
 
 }

@@ -69,5 +69,15 @@ public class UserServiceImpl implements UserService {
 		}
 		
 	}
+	
+	@Override
+	public Long login(String username, String password) {
+	    User user = userRepository.findByUsername(username);
+	    if (user != null && user.getPassword().equals(password)) {
+	        return user.getId(); // 로그인 성공 시 userId 반환
+	    }
+	    return null; // 로그인 실패
+	}
+
 
 }

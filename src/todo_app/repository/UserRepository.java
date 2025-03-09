@@ -35,4 +35,12 @@ public class UserRepository {
 	public void deleteUser(User user) {
 		userList.remove(user);
 	}
+	
+	public User findByUsername(String username) {
+	    return userList.stream()
+	        .filter(user -> user.getUsername().equals(username))
+	        .findFirst()
+	        .orElse(null);
+	}
+
 }

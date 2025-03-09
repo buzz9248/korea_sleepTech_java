@@ -10,4 +10,6 @@ public interface TaskService {
 	List<TaskRespDto> showAllTasks();
 	void updateTask(Long id, String newText);
 	void deleteTask(Long id);
+	List<TaskRespDto> getTasksByUserId(Long userId);
+
 }
